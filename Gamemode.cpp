@@ -1,6 +1,6 @@
 #include "Bomb.h"
 
-char Gamemode::gameModes[2][14] = { {"Defuse"}, {"Defuse (code)"} }; // , { "Missie 2" } };
+char Gamemode::gameModes[2][14] = { {"Defuse"}, {"Defuse (code)"} };
 
 Gamemode::Gamemode()
 {
@@ -37,9 +37,7 @@ void Gamemode::Loop()
 void Gamemode::updateDisplay(int gameModeShowing)
 {
 	myLCD->setCursor(0, 1);
-	myLCD->print("<                  >");
-	myLCD->setCursor(2, 1);
-	myLCD->print(Gamemode::gameModes[gameModeShowing]);
+	myLCD->print(printf("< %-16s >", Gamemode::gameModes[gameModeShowing]));
 }
 
 void Gamemode::SelectionMenu()
@@ -52,7 +50,7 @@ void Gamemode::SelectionMenu()
 	myLCD->print("[1] Prev    Next [3]");
 
 	myLCD->setCursor(0, 3);
-	myLCD->print("     [#] Confirm");
+	myLCD->print(printf("%20s", "Confirm [#]"));
 	int gameModeSelected = 0;
 	int gameModeShowing = 0;
 	Gamemode::updateDisplay(gameModeShowing);
