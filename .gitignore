@@ -234,3 +234,10 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+__vm/.airsoft-bomb.vsarduino.h
+__vm/Upload.vmps.xml
+__vm/Compile.vmps.xml
+__vm/.bomb.vsarduino.h
+__vm/Configuration.Debug.vmps.xml
+bomb.vcxproj
+Bomb.vcxproj.filters
